@@ -15,6 +15,8 @@ public class HomepageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        /**
+         * Listener for calendar options
         Button startCalendarQiHuang = (Button) findViewById(R.id.Calendar);
         startCalendarQiHuang.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -23,5 +25,6 @@ public class HomepageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+         **/
     }
 }
