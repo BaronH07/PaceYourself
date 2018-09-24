@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import team7.paceyourself.CalendarQiHuang.SyllabusActivity;
+//import team7.paceyourself.CalendarQiHuang.SyllabusActivity;
 
 public class HomepageActivity extends AppCompatActivity {
 
@@ -15,6 +15,8 @@ public class HomepageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        /**
+         *  Button for Calendar
         Button startCalendarQiHuang = (Button) findViewById(R.id.Calendar);
         startCalendarQiHuang.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -23,5 +25,6 @@ public class HomepageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+         */
     }
 }
