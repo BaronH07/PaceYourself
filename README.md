@@ -1,5 +1,5 @@
 # PaceYourself
-Innovation on E-Health by Team 7
+Innovation in E-Health by Team 7
 
 ============================================
 
@@ -7,7 +7,7 @@ Initial Commit
 
 Content:
 
-  Base of the project via Android Studio
+  Basic frame of the project
 
 From:
 
