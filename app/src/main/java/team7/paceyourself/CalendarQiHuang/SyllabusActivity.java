@@ -26,10 +26,6 @@ import java.util.HashMap;
 
 import team7.paceyourself.R;
 
-/**
- * Created by ldf on 16/11/4.
- */
-
 @SuppressLint("SetTextI18n")
 public class SyllabusActivity extends AppCompatActivity {
     TextView tvYear;
@@ -78,11 +74,6 @@ public class SyllabusActivity extends AppCompatActivity {
         Log.e("ldf","OnCreated");
     }
 
-    /**
-     * onWindowFocusChanged回调时，将当前月的种子日期修改为今天
-     *
-     * @return void
-     */
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
@@ -92,21 +83,11 @@ public class SyllabusActivity extends AppCompatActivity {
         }
     }
 
-    /*
-    * 如果你想以周模式启动你的日历，请在onResume是调用
-    * Utils.scrollTo(content, rvToDoList, monthPager.getCellHeight(), 200);
-    * calendarAdapter.switchToWeek(monthPager.getRowIndex());
-    * */
     @Override
     protected void onResume() {
         super.onResume();
     }
 
-    /**
-     * 初始化对应功能的listener
-     *
-     * @return void
-     */
     private void initToolbarClickListener() {
         backToday.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,11 +129,6 @@ public class SyllabusActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * 初始化currentDate
-     *
-     * @return void
-     */
     private void initCurrentDate() {
         currentDate = new CalendarDate();
         tvYear.setText(" "+currentDate.getYear()+"");
@@ -162,9 +138,6 @@ public class SyllabusActivity extends AppCompatActivity {
         //tvMonth.setText(currentDate.getMonth() + "");
     }
 
-    /**
-     * 初始化CustomDayView，并作为CalendarViewAdapter的参数传入
-     */
     private void initCalendarView() {
         initListener();
         CustomDayView customDayView = new CustomDayView(context, R.layout.custom_day);
@@ -184,10 +157,6 @@ public class SyllabusActivity extends AppCompatActivity {
         initMonthPager();
     }
 
-    /**
-     * 初始化标记数据，HashMap的形式，可自定义
-     * 如果存在异步的话，在使用setMarkData之后调用 calendarAdapter.notifyDataChanged();
-     */
     private void initMarkData() {
         HashMap<String, String> markData = new HashMap<>();
         markData.put("2017-8-9", "1");
@@ -222,11 +191,6 @@ public class SyllabusActivity extends AppCompatActivity {
         //tvMonth.setText(date.getMonth() + "");
     }
 
-    /**
-     * 初始化monthPager，MonthPager继承自ViewPager
-     *
-     * @return void
-     */
     private void initMonthPager() {
         monthPager.setAdapter(calendarAdapter);
         monthPager.setCurrentItem(MonthPager.CURRENT_DAY_INDEX);

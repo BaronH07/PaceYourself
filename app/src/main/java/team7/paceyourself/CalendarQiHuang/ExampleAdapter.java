@@ -10,10 +10,6 @@ import android.widget.TextView;
 
 import team7.paceyourself.R;
 
-/**
- * Created by ldf on 17/6/14.
- */
-
 public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ViewHolder> {
 
     private final LayoutInflater layoutInflater;

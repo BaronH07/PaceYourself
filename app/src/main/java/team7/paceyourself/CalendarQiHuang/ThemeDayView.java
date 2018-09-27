@@ -12,10 +12,6 @@ import com.ldf.calendar.view.DayView;
 
 import team7.paceyourself.R;
 
-/**
- * Created by ldf on 17/6/27.
- */
-
 public class ThemeDayView extends DayView {
     private TextView dateTv;
     private ImageView marker;
@@ -23,12 +19,6 @@ public class ThemeDayView extends DayView {
     private View todayBackground;
     private final CalendarDate today = new CalendarDate();
 
-    /**
-     * Constructor. Sets up the MarkerView with a custom layout resource.
-     *
-     * @param context
-     * @param layoutResource the layout resource to use for the MarkerView
-     */
     public ThemeDayView(Context context, int layoutResource) {
         super(context, layoutResource);
         dateTv = (TextView) findViewById(R.id.date);

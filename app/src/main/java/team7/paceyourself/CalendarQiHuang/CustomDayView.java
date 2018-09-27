@@ -15,10 +15,6 @@ import com.ldf.calendar.view.DayView;
 
 import team7.paceyourself.R;
 
-/**
- * Created by ldf on 17/6/26.
- */
-
 @SuppressLint("ViewConstructor")
 public class CustomDayView extends DayView {
 
@@ -28,12 +24,6 @@ public class CustomDayView extends DayView {
     private View todayBackground;
     private final CalendarDate today = new CalendarDate();
 
-    /**
-     * 构造器
-     *
-     * @param context 上下文
-     * @param layoutResource 自定义DayView的layout资源
-     */
     public CustomDayView(Context context, int layoutResource) {
         super(context, layoutResource);
         dateTv = (TextView) findViewById(R.id.date);
@@ -83,8 +73,6 @@ public class CustomDayView extends DayView {
     private void renderToday(CalendarDate date) {
         if (date != null) {
             if (date.equals(today)) {
-                //dateTv.setText("Today");
-                //dateTv.setTextSize(9);
                 dateTv.setText(" "+date.day+" ");
                 todayBackground.setVisibility(VISIBLE);
             } else {
